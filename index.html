@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app='myApp'  >
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta name="fragment" content="!"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Angular App</title>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="bower_components/angular/angular-csp.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.min.css">
+        <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css">
+        <style>
+        .view-animate-container {
+        position: relative;
+        }
+        </style>
+    </head>
+    <body class="ng-cloak" style="overflow-y: scroll">
+        <div class="navbar navbar-default" role="navigation" bs-navbar>
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">AppLogo</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li data-match-route="post"><a href="#country">Get Country</a></li>
+                    <!--  <li login></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="container view-animate-container">
+            <div ng-view class="am-fade-and-slide-top">
+            </div>
+        </div>
+        <toaster-container toaster-options="{'position-class': 'toast-top-right'}"></toaster-container>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/AngularJS-Toaster/toaster.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+        <script src="app.js"></script>
+        <script src="modules/country/controllers/countryController.js"></script>
+    </body>
+</html>
